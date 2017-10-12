@@ -1,0 +1,16 @@
+Input: grapharray[n][n], source
+stack<int> S
+int visited[n] (array to keep track of nodes visited, all values set to
+0 except source which is set to 1 i.e. 0 = not visited, 1 = visited)
+S.push(source)
+while(S is not empty)
+  v = S.top
+  S.pop()
+  for each neighbor w of v
+    if visited[w] = 0
+      print w
+      visited[w] = 1
+      S.push(w)
+    end if
+  end for
+end while
